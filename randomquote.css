@@ -1,0 +1,53 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+
+body {
+  background-color: #FFED91;
+}
+
+#section_title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: black;
+  font-size: 5em;
+}
+
+#section_about {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#section_about p {
+  font-size: 1.4em;
+}
+
+#section_button_bar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#section_quote {
+  margin-top: 30px;
+  height: 200px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#quote {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#quote p {
+  font-size: 1.2em;
+}
