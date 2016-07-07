@@ -1,49 +1,71 @@
 
 body {
-  background-color: #FFED91;
+  background-color: #000;
+  color: white;
 }
 
 #section_title {
-  margin-top: 20px;
-  text-align: center;
+  display: block;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: -5px;
 }
 
-h1 {
+body::after {
+  content: "";
+  background: url("https://dl.dropboxusercontent.com/u/26748984/web-project-resources/freecodecamp/RandomQuoteGenerator/theOfficeWallpaper.jpg") no-repeat center center fixed;
+  background: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#section_title h1 {
   font-family: 'Lobster', cursive;
-  color: black;
+  color: white;
   font-size: 5em;
+  text-align: center;
 }
 
 #section_about {
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 25px;
   text-align: center;
-}
-
-#section_about p {
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 #section_button_bar {
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
 }
 
 #section_quote {
-  margin-top: 30px;
-  height: 200px;
-  width: 900px;
+  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  font-size: 1.2em;
 }
+
+
 
 #quote {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+#quote:hover {
+  cursor: pointer;
+  color: lightcyan;
 }
 
-#quote p {
-  font-size: 1.2em;
+#tweet-quote {
+  margin-left: 30px;
 }

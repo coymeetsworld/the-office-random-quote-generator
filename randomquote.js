@@ -1,20 +1,23 @@
 $(document).ready(function() {
 
+  /* Initializing variables and display quote/tweet button. */
   var currentQuoteNum = 0;
+  var startingQuote = "I am ready to face any challenges that might be foolish enough to face me. - Dwight Schrute";
 
-  updateTweetButton();
+  $("#quote").text(startingQuote);
+  updateTweetButton(startingQuote);
 
-  $("#generate_quote_button").click(function() {
-    console.log("Generate quote button clicked.");
+  /* Click handler for quote section to update the quote. */
+  $("#quote").click(function() {
     var quote = generateRandomQuote();
-    $("#quote p").replaceWith("<p>" + quote + "</p>");
+    //$("#quote p").replaceWith("<p>" + quote + "</p>");
+    $("#quote").text(quote);
     updateTweetButton(quote);
   });
 
+
+  /* Removes the current tweet button and creates a new one with the text from variable quote inside of it. */
   function updateTweetButton(quote) {
-    
-    console.log("updateTweetButton called");
-    console.log("quote: " + quote);
 
     /* Remove old button */
     $(".twitter-share-button").remove();
@@ -34,15 +37,13 @@ $(document).ready(function() {
   }
 
 
+  /* Function to generate a new random quote. Calls updateTweetButton(). */
   function generateRandomQuote() {
-   //var currentQuoteNum = 0;
 
     /* Avoid generating the same quote twice in a row*/
     var quote_number;
     while (true) {
-      quote_number = Math.floor((Math.random() * 20) + 1);
-      console.log("currentQuoteNum: " + currentQuoteNum);
-      console.log("quote_number now: " + quote_number);
+      quote_number = Math.floor((Math.random() * 40) + 1);
       if (currentQuoteNum != quote_number) {
         currentQuoteNum = quote_number;
         break;
@@ -94,7 +95,7 @@ $(document).ready(function() {
          quote = "I love inside jokes. I'd love to be a part of one someday. - Michael Scott";
          break;
       case 15:
-         quote = "Andy Bernard Does Not Lose Contests. He Wins Them… Or He Quits Them Because They Are Unfair. - Andy Bernard";
+         quote = "Andy Bernard does not lose contests. He wins them...or he quits them because they are unfair. - Andy Bernard";
          break;
       case 16:
          quote = "You couldn't handle my undivided attention. - Dwight Schrute";
@@ -109,8 +110,68 @@ $(document).ready(function() {
          quote = "\[Groans\] These meetings are pointless. - Michael Scott";
          break;
       case 20:
-         quote = "Right here is my favorite New York pizza joint. \[Goes into a Sbarros\] - Andy Bernard";
+         quote = "Right here is my favorite New York pizza joint. \[Goes into a Sbarros\] - Michael Scott";
          break;
+      case 21:
+        quote = "I, declare....BANKRUPTCY!!!!! - Michael Scott";
+        break;
+      case 22:
+        quote = "There's too many people on this earth. We need a new plague. - Dwight Schrute";
+        break;
+      case 23:
+        quote = "Dwight, you ignorant slut! - Michael Scott";
+        break;
+      case 24:
+        quote = "I really should have a tweeter account - Dwight Schrute";
+        break;
+      case 25:
+        quote = "I am running away from my responsibilities, and it feels good. - Michael Scott";
+        break;
+      case 26:
+        quote = "Happy birthday Jesus, sorry your party's so lame. - Michael Scott";
+        break;
+      case 27:
+        quote = "She certainly seems to love lovemaking with me. - Dwight Schrute";
+        break;
+      case 28:
+        quote = "All you do is dress fancy and sing. Oh Lalalalalalala. What does that mean? - Dwight Schrute";
+        break;
+      case 29:
+        quote = "We should give them a one-way ticket to Montego Bay, where they keep all the Al-Qaeda - Michael Scott";
+        break;
+      case 30:
+        quote = "Hi. I'm date Mike. Nice to meet me. How do you like your eggs in the morning? - Michael Scott";
+        break;
+      case 31:
+        quote = "Pam, how do girls your age feel about futons? - Michael Scott";
+        break;
+      case 32:
+        quote = "I understand nothing. - Michael Scott";
+        break;
+      case 33:
+        quote = "Mike I'm gonna have to ask you to leave. So I can learn about this tiny television. - Darryl Philbin";
+        break;
+      case 34:
+        quote = "I don't want to prank anymore. Things get real. - Darryl Philbin";
+        break;
+      case 35:
+        quote = "I'm not a big believer in therapy, but I'll go into my own pocket to cover his co-pay. - Darryl Philbin";
+        break;
+      case 36:
+        quote = "I already won the lottery. I was born in the US of A baby. - Creed Bratton";
+        break;
+      case 37:
+        quote = "Oh I steal things all the time. It's just something that I do. I stopped caring a long time ago. - Creed Bratton";
+        break;
+      case 38:
+        quote = "If I can't scuba, then what's this all been about. What am I working toward? - Creed Bratton";
+        break;
+      case 39:
+        quote = "What's a text? - Creed Bratton";
+        break;
+      case 40:
+        quote = "I'm always thinking one step ahead, like a... carpenter... that makes stairs. - Andy Bernard";
+        break;
       default:
          quote = "That's what she said. - Michael Scott"
     }
