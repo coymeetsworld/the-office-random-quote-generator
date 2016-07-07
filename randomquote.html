@@ -10,6 +10,24 @@
     <title>Random Quote Generator</title>
   </head>
   <body>
+    <div class="modal fade" id="myModalAbout" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">x</span>
+            </button>
+            <h1 style="text-align: center; font-size: 2em;">About Random Quote Generator</h1>
+          </div>
+          <div class="modal-body">
+            <div class="row" style="margin: auto;">
+              <p>The Random Quote Generator was written by Coy Sanders to complete one of the four <a href="https://www.freecodecamp.com/challenges/build-a-random-quote-machine" target="_blank">Intermediate Front-End Development Projects</a> for FreeCodeCamp to earn the Front-End Development Certification.</p>
+              <p>This application generates a random quote when the quote section is clicked. It also creates a Tweet button that allows the user to tweet out the quote to their followers. The Twitter API is used to accomplish this and documentation can be found <a href="https://dev.twitter.com/overview/api" target="_blank">here</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid">
       <div class="row" id="section_title">
         <h1>Random Quote Generator</h1>
@@ -22,9 +40,11 @@
       <div class="row" id="section_quote">
         <span id="quote"></span><span id="tweet-quote"></span>
       </div>
+      <div id="about"><a href="#" data-toggle="modal" data-target="#myModalAbout">About</a></div>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="randomquote.js"></script>
   </body>
 </html>
