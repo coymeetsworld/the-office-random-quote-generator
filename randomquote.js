@@ -22,9 +22,12 @@ $(document).ready(function() {
     /* Remove old button */
     $(".twitter-share-button").remove();
 
+    var link = "https://twitter.com/intent/tweet?url=/?text=" + encodeURIComponent(quote); // Needed to encode special characters like question marks so that it can be in the URL.
+
     /* Create new button with new quote text in it. */
     var tweetButton = $('<a>');
-    tweetButton.attr('href', "https://twitter.com/share");
+    tweetButton.attr('href', link);
+
     tweetButton.attr('class',"twitter-share-button");
     tweetButton.attr('id','tweet-button');
     tweetButton.attr('data-lang', "en");
