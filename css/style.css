@@ -4,12 +4,14 @@ body {
   color: white;
 }
 
+.container {
+  margin: 0 auto;
+}
+
 #section-title {
   display: block;
-  max-width: 800px;
   margin: 0 auto;
   margin-top: -5px;
-  position: relative;
 }
 
 body::after {
@@ -32,14 +34,25 @@ body::after {
 h1 {
   color: white;
   font-family: 'Lobster', cursive;
-  font-size: 5em;
+  font-size: 3em;
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+
+#section-desc {
+  font-size: 1.1em;
+  margin-top: 2em;
   text-align: center;
 }
 
-#section-about {
-  font-size: 1.3em;
-  margin-top: 25px;
-  text-align: center;
+#section-desc a,
+#section-desc a:visited {
+  color: rgb(51, 122, 183);
+  text-decoration: none; 
+}
+
+#section-desc a:hover {
+  color:rgb(91, 162, 223);
 }
 
 #section-quote {
@@ -63,21 +76,21 @@ h1 {
   margin-left: 30px;
 }
 
-#about {
-  bottom: 0;
+#section-about {
+  bottom: 0.25em;
   text-align: right;
-  padding-right: 30px;
   position: fixed;
   width: 100%;
 }
 
-a,
+#section-about a,
 a:visited{
   font-size: 0.8em;
   color:#fff;
+  padding-right: 3em;
   text-decoration: none;
 }
 
-a:hover {
+#section-about a:hover {
   text-decoration: underline;
 }
